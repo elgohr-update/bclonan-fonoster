@@ -66,7 +66,7 @@ jobs:
         dst: |
           docker.io/fonoster/routr:${{ steps.get_version.outputs.VERSION }}
     - name: Publish to Docker Hub the Fonoster installer
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       env:
         FONOSTER_VERSION: ${{ steps.get_version.outputs.VERSION }}
         BRANCH: main
@@ -77,7 +77,7 @@ jobs:
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
         buildargs: FONOSTER_VERSION,BRANCH          
     - name: Publish to Docker Hub the Projects API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/projects
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -85,7 +85,7 @@ jobs:
         workdir: mods/projects
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Users API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/users
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -93,7 +93,7 @@ jobs:
         workdir: mods/users
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"        
     - name: Publish to Docker Hub the Secrets API 
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/secrets
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -101,7 +101,7 @@ jobs:
         workdir: mods/secrets
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"        
     - name: Publish to Docker Hub the Funcs API 
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/funcs
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -109,7 +109,7 @@ jobs:
         workdir: mods/funcs
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Agents API 
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/agents
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -117,7 +117,7 @@ jobs:
         workdir: mods/agents
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Domains API 
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/domains
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -125,7 +125,7 @@ jobs:
         workdir: mods/domains
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Numbers API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/numbers
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -133,7 +133,7 @@ jobs:
         workdir: mods/numbers
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Providers API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/providers
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -141,7 +141,7 @@ jobs:
         workdir: mods/providers
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Storage API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/storage
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -149,7 +149,7 @@ jobs:
         workdir: mods/storage
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the CallManager API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/callmanager
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -157,7 +157,7 @@ jobs:
         workdir: mods/callmanager
         tags: "latest, ${{ steps.get_version.outputs.VERSION }}"
     - name: Publish to Docker Hub the Auth API
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: fonoster/auth
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
